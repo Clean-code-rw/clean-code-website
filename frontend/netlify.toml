@@ -1,0 +1,6 @@
+# Netlify reads this file from the site's base directory (`frontend`).
+[build]
+  # Fall back to the deploy's own URL when VITE_SITE_URL isn't set, so the
+  # canonical link and social previews in index.html are always absolute.
+  command = "VITE_SITE_URL=${VITE_SITE_URL:-$URL} npm run build"
+  publish = "dist"
