@@ -29,9 +29,9 @@ const MEMBERS: CollageMember[] = [
     // portrait: { skin: '#c99a76', hair: '#3a2416', hairStyle: 'short', shirtClass: 'fill-ink', backgroundClass: 'fill-sky-soft' },
   },
   {
-    name: 'Victor Ansima',
+    name: 'Victoire Ansima',
     heightPercent: 90,
-    imgSrc: '/members/victor.png',
+    imgSrc: '/members/victoire.png',
     visibility: 'block',
     // portrait: { skin: '#e9bf9b', hair: '#b4472a', hairStyle: 'long', shirtClass: 'fill-sky', backgroundClass: 'fill-surface' },
   },
