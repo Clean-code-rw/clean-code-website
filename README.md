@@ -29,10 +29,10 @@ New to open source? Look for issues labelled [`good first issue`](../../issues?q
 
 | Part     | Technology                                                                   |
 | -------- | ---------------------------------------------------------------------------- |
-| Frontend | [React 19](https://react.dev/) with [Vite](https://vite.dev/)                |
+| Frontend | [React 19](https://react.dev/) with [TypeScript](https://www.typescriptlang.org/), [Vite](https://vite.dev/) and [Tailwind CSS 4](https://tailwindcss.com/) |
 | Backend  | [Django 6](https://www.djangoproject.com/) with [Django REST Framework](https://www.django-rest-framework.org/) |
 | Database | SQLite in development                                                        |
-| Quality  | [Ruff](https://docs.astral.sh/ruff/) (Python), [oxlint](https://oxc.rs/) (JavaScript), GitHub Actions CI |
+| Quality  | [Ruff](https://docs.astral.sh/ruff/) (Python), [oxlint](https://oxc.rs/) and `tsc` (TypeScript), GitHub Actions CI |
 
 ## 📁 Project structure
 
@@ -48,7 +48,8 @@ New to open source? Look for issues labelled [`good first issue`](../../issues?q
 ├── frontend/                React app
 │   ├── src/                 Components, styles, entry point
 │   ├── public/              Static files served as-is
-│   └── vite.config.js       Dev server and /api proxy
+│   ├── tsconfig*.json       TypeScript settings
+│   └── vite.config.ts       Dev server, Tailwind plugin and /api proxy
 └── .github/                 CI workflow, issue and pull request templates
 ```
 

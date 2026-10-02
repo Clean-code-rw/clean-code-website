@@ -122,13 +122,15 @@ This is a clean code community, so the code should be an example of what we teac
 - Commit migrations together with the model changes that need them.
 - Never commit secrets. New settings go into `.env.example` with a safe placeholder value.
 
-### JavaScript / React
+### TypeScript / React
 
+- Write TypeScript (`.ts` / `.tsx`), not JavaScript. Type component props and API responses; avoid `any`.
 - Use function components and hooks.
-- One component per file, with the file named after the component (`EventCard.jsx`).
+- One component per file, with the file named after the component (`EventCard.tsx`).
 - Call the backend with relative URLs (`/api/...`). The Vite dev server forwards them to Django.
 - Make pages work on mobile, and keep them accessible: use semantic HTML, `alt` text on images, and labels on form fields.
-- `npm run lint` must pass.
+- Style with [Tailwind CSS](https://tailwindcss.com/) utility classes. Shared colors and fonts are theme tokens in `src/index.css` (for example `text-accent`, `bg-surface`); add new ones there instead of hard-coding colors.
+- `npm run lint` and `npm run build` (which type-checks) must pass.
 
 ## Reporting bugs and requesting features
 
