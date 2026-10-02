@@ -10,6 +10,11 @@ export type IconName =
   | 'check'
   | 'menu'
   | 'close'
+  | 'zap'
+  | 'linkedin'
+  | 'trending-up'
+  | 'video'
+  | 'calendar'
 
 const PATHS: Record<IconName, string> = {
   code: 'M16 18l6-6-6-6M8 6l-6 6 6 6',
@@ -25,6 +30,12 @@ const PATHS: Record<IconName, string> = {
   check: 'M20 6L9 17l-5-5',
   menu: 'M4 7h16M4 12h16M4 17h16',
   close: 'M6 6l12 12M18 6L6 18',
+  zap: 'M13 2L3 14h9l-1 8 10-12h-9l1-8z',
+  linkedin:
+    'M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2zM6 4a2 2 0 1 1-4 0 2 2 0 0 1 4 0z',
+  'trending-up': 'M23 6l-9.5 9.5-5-5L1 18M17 6h6v6',
+  video: 'M23 7l-7 5 7 5V7zM3 5h11a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z',
+  calendar: 'M8 2v4M16 2v4M3 10h18M5 4h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z',
 }
 
 interface IconProps {

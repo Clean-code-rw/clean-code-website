@@ -6,6 +6,7 @@ import Hero from './components/Hero'
 import Navbar from './components/Navbar'
 import Principles from './components/Principles'
 import TechMarquee from './components/TechMarquee'
+import Training from './components/Training'
 import Workflow from './components/Workflow'
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Hero />
         <TechMarquee />
         <About />
+        <Training />
         <Principles />
         <GetInvolved />
         <Workflow />

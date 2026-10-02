@@ -1,4 +1,5 @@
-export const REPO_URL = 'https://github.com/YOUR-ORG/cleancode'
+export const ORG_URL = 'https://github.com/Clean-code-rw'
+export const REPO_URL = `${ORG_URL}/clean-code-website`
 export const ISSUES_URL = `${REPO_URL}/issues`
 export const GOOD_FIRST_ISSUES_URL = `${ISSUES_URL}?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22`
 
@@ -9,6 +10,7 @@ export interface NavLink {
 
 export const NAV_LINKS: NavLink[] = [
   { label: 'About', href: '#about' },
+  { label: 'Training', href: '#training' },
   { label: 'Principles', href: '#principles' },
   { label: 'Get involved', href: '#get-involved' },
   { label: 'Contribute', href: '#contribute' },
@@ -26,6 +28,52 @@ export const TECH_STACK: string[] = [
   'oxlint',
   'GitHub Actions',
 ]
+
+export type TrainingIcon = 'trending-up' | 'video'
+
+export interface TrainingFormat {
+  icon: TrainingIcon
+  title: string
+  description: string
+}
+
+export const TRAINING_FORMATS: TrainingFormat[] = [
+  {
+    icon: 'trending-up',
+    title: 'Level-up trainings',
+    description:
+      'Structured trainings that help members grow their skills, from writing their first lines of code to shipping work they are proud of.',
+  },
+  {
+    icon: 'video',
+    title: 'Online motivation events',
+    description:
+      'Online sessions for people who are just starting out, to keep the momentum going and remind beginners that every developer started where they are.',
+  },
+]
+
+export type ProgramTopicIcon = 'code' | 'design' | 'zap' | 'github' | 'linkedin'
+
+export interface ProgramTopic {
+  icon: ProgramTopicIcon
+  title: string
+  description: string
+}
+
+export const CURRENT_PROGRAM = {
+  durationWeeks: 7,
+  audience: 'Beginners',
+  title: 'Introduction to web development',
+  description:
+    'A seven-week program that takes complete beginners from zero to building and sharing their first web pages.',
+  topics: [
+    { icon: 'code', title: 'HTML', description: 'Structure content for the web' },
+    { icon: 'design', title: 'CSS', description: 'Style layouts that look good on any screen' },
+    { icon: 'zap', title: 'JavaScript', description: 'Bring pages to life with interactivity' },
+    { icon: 'github', title: 'Git & GitHub', description: 'Track your code and collaborate' },
+    { icon: 'linkedin', title: 'LinkedIn', description: 'Share your work and grow your network' },
+  ] satisfies ProgramTopic[],
+}
 
 export interface Principle {
   title: string

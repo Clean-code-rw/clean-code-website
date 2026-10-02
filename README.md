@@ -124,7 +124,9 @@ npm install
 npm run dev
 ```
 
-Open http://localhost:5173. The page should show **API status: ok**, which means the frontend is talking to the backend. 🎉
+Open http://localhost:5173 to see the site. To check that the frontend can reach the backend, open http://localhost:5173/api/health/. It should return `{"status": "ok", ...}`. 🎉
+
+For a production build, copy `frontend/.env.example` to `frontend/.env.production` and set `VITE_SITE_URL` to the public address of the site. It is used for the canonical link and for link previews on social media.
 
 ### Troubleshooting
 
@@ -143,7 +145,7 @@ You haven't created `backend/.env`, or `DJANGO_SECRET_KEY` is missing from it. S
 </details>
 
 <details>
-<summary>The page shows "API status: unreachable"</summary>
+<summary>http://localhost:5173/api/health/ returns an error</summary>
 
 The Django server isn't running, or it isn't on port 8000. Start it with `python manage.py runserver` in the `backend` folder, with the virtual environment activated.
 

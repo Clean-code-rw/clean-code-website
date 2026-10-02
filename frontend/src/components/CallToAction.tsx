@@ -17,8 +17,8 @@ function CallToAction() {
         />
 
         <div className="relative">
-          <p className="mb-5 font-mono text-xs tracking-widest text-on-panel-muted uppercase">
-            $ git clone cleancode
+          <p className="mb-5 text-xs font-semibold tracking-widest text-on-panel-muted uppercase">
+            Open to everyone
           </p>
           <h2 className="mx-auto max-w-3xl font-serif text-[clamp(2rem,5vw,3.75rem)] leading-[1.08] font-semibold tracking-tight text-on-panel">
             Your first pull request is closer than you think.

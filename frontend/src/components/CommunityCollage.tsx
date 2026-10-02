@@ -55,34 +55,6 @@ const MEMBERS: CollageMember[] = [
   },
 ]
 
-interface FloatingNote {
-  text: string
-  position: string
-  animation: string
-  accentClass: string
-}
-
-const FLOATING_NOTES: FloatingNote[] = [
-  {
-    text: 'refactor: extract MemberCard',
-    position: 'left-[4%] top-[8%] sm:left-[8%]',
-    animation: 'animate-float',
-    accentClass: 'bg-sky',
-  },
-  {
-    text: '✓ All checks passed',
-    position: 'right-[4%] top-[2%] sm:right-[10%]',
-    animation: 'animate-float-slow',
-    accentClass: 'bg-teal',
-  },
-  {
-    text: 'review: approved',
-    position: 'hidden md:flex left-[30%] -top-[6%]',
-    animation: 'animate-float-slow',
-    accentClass: 'bg-ink',
-  },
-]
-
 /** A row of community member portraits, echoing a group photo of the community. */
 function CommunityCollage() {
   return (
@@ -110,23 +82,12 @@ function CommunityCollage() {
             <div className="h-full overflow-hidden rounded-t-[2rem] rounded-b-xl border border-line shadow-[0_20px_40px_-24px_rgb(43_54_64/0.5)] transition-transform duration-500 group-hover:-translate-y-2">
               <MemberPortrait portrait={member.portrait} />
             </div>
-            <span className="absolute bottom-3 left-1/2 -translate-x-1/2 rounded-full bg-card/90 px-3 py-1 font-mono text-[10px] font-medium whitespace-nowrap text-ink shadow-sm backdrop-blur sm:text-xs">
+            <span className="absolute bottom-3 left-1/2 -translate-x-1/2 rounded-full bg-card/90 px-3 py-1 text-[11px] font-semibold whitespace-nowrap text-ink shadow-sm backdrop-blur sm:text-xs">
               {member.role}
             </span>
           </li>
         ))}
       </ul>
-
-      {FLOATING_NOTES.map((note) => (
-        <div
-          key={note.text}
-          className={`absolute ${note.position} ${note.animation} z-10 flex items-center gap-2 rounded-xl border border-line bg-card/95 px-3 py-2 font-mono text-[10px] text-ink shadow-[0_12px_32px_-16px_rgb(43_54_64/0.45)] backdrop-blur sm:text-xs`}
-          aria-hidden="true"
-        >
-          <span className={`h-2 w-2 rounded-full ${note.accentClass}`} />
-          {note.text}
-        </div>
-      ))}
     </div>
   )
 }
