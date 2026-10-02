@@ -1,5 +1,5 @@
 import { useState, type CSSProperties } from 'react'
-import MemberPortrait, { type PortraitStyle } from './MemberPortrait'
+// import MemberPortrait, { type PortraitStyle } from './MemberPortrait'
 
 interface CollageMember {
   name: string
@@ -10,66 +10,66 @@ interface CollageMember {
   /** Hidden below this breakpoint to keep the row readable on small screens. */
   visibility: string
   /** Placeholder drawn when there is no photo, or the photo fails to load. */
-  portrait: PortraitStyle
+  // portrait: PortraitStyle
 }
 
 const MEMBERS: CollageMember[] = [
   {
-    name: 'Tasabeeh',
-    imgSrc: '/members/tasabeeh.png',
+    name: 'Valentin abamungu',
+    imgSrc: '/members/valentin.png',
     heightPercent: 74,
     visibility: 'hidden lg:block',
-    portrait: { skin: '#6b4430', hair: '#1b1410', hairStyle: 'afro', shirtClass: 'fill-teal', backgroundClass: 'fill-teal-soft' },
-  },
-  {
-    name: 'Victor Ansima',
-      imgSrc: '/members/victor.png',
-    heightPercent: 84,
-    visibility: 'hidden sm:block',
-    portrait: { skin: '#c99a76', hair: '#3a2416', hairStyle: 'short', shirtClass: 'fill-ink', backgroundClass: 'fill-sky-soft' },
+    // portrait: { skin: '#6b4430', hair: '#1b1410', hairStyle: 'afro', shirtClass: 'fill-teal', backgroundClass: 'fill-teal-soft' },
   },
   {
     name: 'Rebecca Awar',
+      imgSrc: '/members/rebecca.png',
+    heightPercent: 84,
+    visibility: 'hidden sm:block',
+    // portrait: { skin: '#c99a76', hair: '#3a2416', hairStyle: 'short', shirtClass: 'fill-ink', backgroundClass: 'fill-sky-soft' },
+  },
+  {
+    name: 'Victor Ansima',
     heightPercent: 90,
-    imgSrc: '/members/rebecca.png',
+    imgSrc: '/members/victor.png',
     visibility: 'block',
-    portrait: { skin: '#e9bf9b', hair: '#b4472a', hairStyle: 'long', shirtClass: 'fill-sky', backgroundClass: 'fill-surface' },
+    // portrait: { skin: '#e9bf9b', hair: '#b4472a', hairStyle: 'long', shirtClass: 'fill-sky', backgroundClass: 'fill-surface' },
   },
   {
     name: 'Monica David',
     imgSrc: '/members/monica.png',
     heightPercent: 100,
     visibility: 'block',
-    portrait: { skin: '#5a3826', hair: '#16100c', hairStyle: 'afro', shirtClass: 'fill-teal', backgroundClass: 'fill-sky-soft' },
+    // portrait: { skin: '#5a3826', hair: '#16100c', hairStyle: 'afro', shirtClass: 'fill-teal', backgroundClass: 'fill-sky-soft' },
   },
   {
     name: 'Oplano Mulba',
     imgSrc: '/members/oplano.png',
     heightPercent: 92,
     visibility: 'block',
-    portrait: { skin: '#d9a77f', hair: '#5a3a1e', hairStyle: 'bun', shirtClass: 'fill-sky', backgroundClass: 'fill-teal-soft' },
+    // portrait: { skin: '#d9a77f', hair: '#5a3a1e', hairStyle: 'bun', shirtClass: 'fill-sky', backgroundClass: 'fill-teal-soft' },
   },
   {
-    name: 'Valentin Abamungu',
+    name: 'Tasabeeh',
     heightPercent: 84,
-    imgSrc: '/members/valentin.png',
+      imgSrc: '/members/tasabeeh.png',
     visibility: 'hidden sm:block',
-    portrait: { skin: '#7a4b31', hair: '#120d0a', hairStyle: 'buzz', shirtClass: 'fill-ink', backgroundClass: 'fill-surface' },
+    // portrait: { skin: '#7a4b31', hair: '#120d0a', hairStyle: 'buzz', shirtClass: 'fill-ink', backgroundClass: 'fill-surface' },
   },
   {
-    name: 'Join us',
+    name: 'Ornella',
     heightPercent: 74,
+    imgSrc : "/members/ornella.png",
     visibility: 'hidden lg:block',
-    portrait: { skin: '#e3b48c', hair: '#1f1a17', hairStyle: 'short', shirtClass: 'fill-sky', backgroundClass: 'fill-sky-soft' },
+    
+    // portrait: { skin: '#e3b48c', hair: '#1f1a17', hairStyle: 'short', shirtClass: 'fill-sky', backgroundClass: 'fill-sky-soft' },
   },
 ]
 
 function MemberPhoto({ member }: { member: CollageMember }) {
   const [failed, setFailed] = useState(false)
 
-  if (!member.imgSrc || failed) {
-    return <MemberPortrait portrait={member.portrait} />
-  }
+ 
 
   return (
     <img
