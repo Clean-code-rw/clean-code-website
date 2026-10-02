@@ -69,7 +69,7 @@ const MEMBERS: CollageMember[] = [
 function MemberPhoto({ member }: { member: CollageMember }) {
   const [failed, setFailed] = useState(false)
 
- 
+  if (failed) return null
 
   return (
     <img
